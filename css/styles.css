@@ -131,6 +131,7 @@ form input[type='submit'] {
   fill: var(--Blue);
   transition: all ease-in-out 300ms;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .icon-container:hover {
