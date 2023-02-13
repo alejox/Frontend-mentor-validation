@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 2rem;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ----------------Main------------------- */
+.main-container {
+  margin: 8.5rem auto 6rem;
+}
+
+.logo {
+  display: block;
+  width: 5.2rem;
+  margin: 0 auto 4rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--Gray);
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+h1 span {
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
+}
+
+.suscribe {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 3.6rem;
+}
+
+/* ----------------Form------------------- */
+
+form {
+  width: 28.2rem;
+  margin: 0 auto;
+}
+
+form input[type='email'] {
+  width: 100%;
+  height: 4rem;
+  border-radius: 3.2rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--Blue);
+  padding-left: 2.4rem;
+  color: var(--Blue);
+}
+
+form input[type='email']:focus {
+  outline: none;
+}
+
+form input[type='email']::placeholder {
+  color: var(--Pale-Blue);
+  font-weight: 300;
+}
+
+#error {
+  color: var(--Light-Red);
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+  margin-bottom: 1.4rem;
+}
+
+form input[type='submit'] {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--Blue);
+  color: white;
+  border-radius: 3.2rem;
+  border: none;
+  font-weight: 600;
+  margin-bottom: 7rem;
+  box-shadow: 3px 3px 15px var(--Blue);
+  cursor: pointer;
+}
+
+/* ----------------Img------------------- */
+.dashboard {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 12rem;
+}
+
+/* ----------------Icons------------------- */
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.icon-container {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid var(--Blue);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  fill: var(--Blue);
+  transition: all ease-in-out 300ms;
+  margin-bottom: 4rem;
+}
+
+.icon-container:hover {
+  background-color: var(--Blue);
+  fill: white;
+}
+
+.icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.copy {
+  text-align: center;
+  color: var(--Gray);
+  font-size: 1.2rem;
+}
+
+/* ----------------Footer------------------- */
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ----------------Desktop------------------- */
+
+@media (min-width: 700px) {
+  .logo {
+    width: 9.6rem;
+    margin-bottom: 6rem;
+  }
+  h1 {
+    font-size: 3.2rem;
+  }
+  .suscribe {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+  form {
+    width: 63.8rem;
+    display: flex;
+    gap: 2.4rem;
+    justify-content: space-between;
+  }
+  form input[type="email"] {
+    width: 42rem;
+    height: 5.5rem;
+    font-size: 1.4rem;
+  }
+  #error{
+    text-align: left;
+    padding-left: 2.4rem;
+  }
+  form input[type="submit"] {
+    width: 100%;
+    height: 5.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 9rem;
+  }
+  .dashboard{
+    width: 64rem;
+    margin-bottom: 7.4rem;
+  }
+}
